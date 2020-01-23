@@ -1,42 +1,87 @@
-import java.util.Scanner;
-
+package ua.lviv.iot.first.lab;
 
 public class PromotionalGoods {
 
-    private int discounts = 45;
-    private String name_goods = "iPhone";
-    private int start_cost = 11000;
-    private int promotional_cost = 6050;
+    private int discounts;
+    private String nameGoods;
+    private int startCost;
+    private int promotionalCost;
 
-    protected int the_number_of_units_of_goods_sold = 14353;
-    protected String accessories = "headset";
+    protected int theNumberOfUnitsOfGoodsSold;
+    protected String accessories;
 
-    private String material = "metal";
-    private double size = 6.5;
-    public static int max_sum_of_revenue_per_year = 120000000;
+    private String material;
+    private double size;
+    public static int maxSumOfRevenuePerYear;
 
-    PromotionalGoods() {
-    }
-
-    ;
-
-    PromotionalGoods(int disc, String ng, int sc, int pc) {
+    public PromotionalGoods(int disc, String ng, int sc, int pc, int tn, String a, String m, double s) {
         this.discounts = disc;
-        this.name_goods = ng;
-        this.start_cost = sc;
-        this.promotional_cost = pc;
-
-    }
-
-    PromotionalGoods(int disc, String ng, int sc, int pc, int tn, String a, String m, double s, int ms) {
-        this(disc, ng, sc, pc);
-        this.the_number_of_units_of_goods_sold = tn;
+        this.nameGoods = ng;
+        this.startCost = sc;
+        this.promotionalCost = pc;
+        this.theNumberOfUnitsOfGoodsSold = tn;
         this.accessories = a;
         this.material = m;
         this.size = s;
-        this.max_sum_of_revenue_per_year = ms;
+
     }
 
+    public PromotionalGoods(int disc, String ng, int sc, int pc) {
+        this(disc, ng, sc, pc, 0, null, null, 0);
+
+    }
+
+    public PromotionalGoods() {
+
+    }
+
+    public int getDiscounts() {
+        return discounts;
+    }
+
+    public void setDiscounts(int d) {
+        this.discounts = d;
+    }
+
+    public String getNameGoods() {
+        return nameGoods;
+    }
+
+    public void setNameGoods(String nd) {
+        this.nameGoods = nd;
+    }
+
+    public int getStartCost() {
+        return startCost;
+    }
+
+    public void setStartCost(int sd) {
+        this.startCost = sd;
+    }
+
+    public int getPromotionalCost() {
+        return promotionalCost;
+    }
+
+    public void setPromotionalCost(int pc) {
+        this.promotionalCost = pc;
+    }
+
+    public int getTheNumberOfUnitsOfGoodsSold() {
+        return theNumberOfUnitsOfGoodsSold;
+    }
+
+    public void setTheNumberOfUnitsOfGoodsSold(int tn) {
+        this.theNumberOfUnitsOfGoodsSold = tn;
+    }
+
+    public String getAccessories() {
+        return accessories;
+    }
+
+    public void setAccessories(String a) {
+        this.accessories = a;
+    }
 
     public String getMaterial() {
         return material;
@@ -56,28 +101,28 @@ public class PromotionalGoods {
 
     @Override
     public String toString() {
-        return discounts + " " + name_goods + " " + start_cost + " " + promotional_cost + " " + the_number_of_units_of_goods_sold + " " + accessories + " " + material + " " + size + " " + max_sum_of_revenue_per_year;
+        return discounts + " " + nameGoods + " " + startCost + " " + promotionalCost + " " + theNumberOfUnitsOfGoodsSold + " " + accessories + " " + material + " " + size + " " + maxSumOfRevenuePerYear;
     }
 
     public int printDiscounts() {
         return discounts;
     }
 
-    static public int printStaticMax_sum_of_revenue_per_year() {
-        return max_sum_of_revenue_per_year;
+    static public int printStaticMaxSumOfRevenuePerYear() {
+        return maxSumOfRevenuePerYear;
     }
 
-    public String printName_goods() {
-        return name_goods;
+    public String printNameGoods() {
+        return nameGoods;
     }
-    public int printStart_cost() {
-        return start_cost;
+    public int printStartCost() {
+        return startCost;
     }
-    public int printPromotional_cost() {
-        return promotional_cost;
+    public int printPromotionalCost() {
+        return promotionalCost;
     }
-    public int printThe_number_of_units_of_goods_sold() {
-        return the_number_of_units_of_goods_sold;
+    public int printTheNumberOfUnitsOfGoodsSold() {
+        return theNumberOfUnitsOfGoodsSold;
     }
     public String printAccessories() {
         return accessories;
@@ -90,15 +135,16 @@ public class PromotionalGoods {
     }
     public void resetValues(int disc, String ng, int sc, int pc, int tn, String a, String m, double s, int ms ){
         this.discounts = disc;
-        this.name_goods = ng;
-        this.start_cost = sc;
-        this.promotional_cost = pc;
-        this.the_number_of_units_of_goods_sold = tn;
+        this.nameGoods = ng;
+        this.startCost = sc;
+        this.promotionalCost = pc;
+        this.theNumberOfUnitsOfGoodsSold = tn;
         this.accessories = a;
         this.material = m;
         this.size = s;
-        this.max_sum_of_revenue_per_year = ms;
+        this.maxSumOfRevenuePerYear = ms;
 
     }
-    }
 
+
+}
