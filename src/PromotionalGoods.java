@@ -14,7 +14,7 @@ public class PromotionalGoods {
     private double size;
     public static int maxSumOfRevenuePerYear;
 
-   public PromotionalGoods(int disc, String ng, int sc, int pc, int tn, String a, String m, double s) {
+    public PromotionalGoods(int disc, String ng, int sc, int pc, int tn, String a, String m, double s) {
         this.discounts = disc;
         this.nameGoods = ng;
         this.startCost = sc;

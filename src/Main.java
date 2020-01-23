@@ -1,6 +1,6 @@
 package ua.lviv.iot.first.lab;
 
-public class PromotionalGoodsMaker {
+public class Main {
     public static void main(String[] args) {
 
         PromotionalGoods Xs = new PromotionalGoods();
@@ -25,5 +25,3 @@ public class PromotionalGoodsMaker {
             i.toString();
             System.out.println(i);
         }
-    }
-}
